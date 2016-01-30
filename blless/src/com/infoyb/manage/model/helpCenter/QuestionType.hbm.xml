@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.helpCenter.QuestionType" table="HC_QUESTION_TYPE">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">Hc_question_type_id</param>
+            </generator>
+        </id>
+        <property name="qtName" column="QTNAME" type="java.lang.String"/>
+        <property name="serialNumber" column="SERIAL_NUMBER" type="java.lang.Integer" />
+    </class>
+</hibernate-mapping>

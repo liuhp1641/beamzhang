@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.account.DrawTransferRecord" table="ACCOUNT_DRAW_RECORD">
+         <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_ACCOUNT_DRAW_TRANSFER</param>
+            </generator>
+        </id>
+        <property name="batchNo" column="BATCH_NO" type="java.lang.String" length="30"/>
+        <property name="totalAmount" column="TOTAL_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="acceptTime" column="ACCEPT_TIME" type="java.util.Date"/>
+        <property name="totalNumber" column="TOTAL_NUMBER" type="java.lang.Integer" length="10"/>
+        <property name="successNumber" column="SUCCESS_NUMBER" type="java.lang.Integer" length="10"/>
+        <property name="failNumber" column="FAIL_NUMBER" type="java.lang.Integer" length="10"/>
+        <property name="status" column="STATUS" type="java.lang.Integer" length="1"/>
+        <property name="successAmount" column="SUCCESS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="failAmount" column="FAIL_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="peopleAccepted" column="PEOPLE_ACCEPTED" type="java.lang.String" length="50"/>
+        <property name="transferFilename" column="TRANSFER_FILENAME" type="java.lang.String" length="255"/>
+        <property name="finished" column="FINISHED" type="java.lang.String" length="1"/>
+        <property name="errorCode" column="ERROR_CODE" type="java.lang.String" length="30"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd"
+       default-lazy-init="true">
+
+
+    <description>Quartz的定时集群任务配置</description>
+
+
+    <!-- Quartz集群Schduler -->
+    <bean id="clusterQuartzScheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <!-- Triggers集成 -->
+        <property name="triggers">
+            <list>
+                <ref bean="drawTrigger"/>
+                <ref bean="reportCronTrigger"/>
+            </list>
+        </property>
+        <!-- quartz配置文件路径 -->
+        <property name="configLocation" value="classpath:quartz.properties"/>
+        <!-- 启动时延期2秒开始任务 -->
+        <!--<property name="startupDelay" value="2" /> -->
+        <!-- Job接受applicationContext的成员变量名 -->
+        <property name="applicationContextSchedulerContextKey" value="applicationContext"/>
+    </bean>
+
+    <!-- issue式 Trigger定义 -->
+    <bean id="drawTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+        <property name="jobDetail" ref="drawJobDetail"/>
+        <property name="startDelay" value="10000"/>
+        <!-- 每次执行间隔10秒 -->
+        <property name="repeatInterval" value="600000"/>
+    </bean>
+
+    <!-- issue JobDetail, 基于JobDetailBean实例化Job Class,可持久化到数据库实现集群 -->
+    <bean name="drawJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+        <property name="jobClass" value="com.cm.manage.quartz.AlipayTransQueryJob"/>
+        <!-- fail-over节点重新执行之前所有失败或未执行的任务, 默认为false. -->
+        <property name="requestsRecovery" value="true"/>
+    </bean>
+
+   <bean id="reportCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">  
+        <property name="jobDetail">  
+            <ref bean="reportJob" />  
+        </property>  
+        <property name="cronExpression">  
+            <value>0 0 12 * * ?</value>  
+        </property>  
+    </bean>  
+      
+     <bean name="reportJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+        <property name="jobClass" value="com.cm.manage.quartz.ReportJob"/>
+    </bean>
+    
+    <!-- Timer Job的可配置属性 -->
+    <util:map id="timerJobConfig">
+        <entry key="nodeName" value="${QUARTZ.NODE.NAME}"/>
+    </util:map>
+</beans>

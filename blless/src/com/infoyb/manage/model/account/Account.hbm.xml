@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cm.manage.model.account.Account" table="ACCOUNT">
+		<id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_ACCOUNT</param>
+			</generator>
+		</id>
+		<property name="userCode" column="USER_CODE" type="java.lang.String" length="20" />
+
+		<property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="bonusAmountFreeze" column="BONUS_AMOUNT_FREEZE" type="java.lang.Double" length="15" scale="2" />
+		<property name="bonusTotal" column="BONUS_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="bonusDrawTotal" column="BONUS_DRAW_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="bonusInTotal" column="BONUS_IN_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="bonusOutTotal" column="BONUS_OUT_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="bonusPayTotal" column="BONUS_PAY_TOTAL" type="java.lang.Double" length="15" scale="2" />
+
+		<property name="rechargeAmount" column="RECHARGE_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="rechargeAmountFreeze" column="RECHARGE_AMOUNT_FREEZE" type="java.lang.Double" length="15" scale="2" />
+		<property name="rechargeTotal" column="RECHARGE_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="rechargeDrawTotal" column="RECHARGE_DRAW_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="rechargeInTotal" column="RECHARGE_IN_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="rechargeOutTotal" column="RECHARGE_OUT_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="rechargePayTotal" column="RECHARGE_PAY_TOTAL" type="java.lang.Double" length="15" scale="2" />
+
+		<property name="presentAmount" column="PRESENT_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="presentAmountFreeze" column="PRESENT_AMOUNT_FREEZE" type="java.lang.Double" length="15" scale="2" />
+		<property name="presentTotal" column="PRESENT_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="presentDrawTotal" column="PRESENT_DRAW_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="presentInTotal" column="PRESENT_IN_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="presentOutTotal" column="PRESENT_OUT_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="presentPayTotal" column="PRESENT_PAY_TOTAL" type="java.lang.Double" length="15" scale="2" />
+
+		<property name="commission" column="COMMISSION" type="java.lang.Double" length="15" scale="2" />
+		<property name="commissionFreeze" column="COMMISSION_FREEZE" type="java.lang.Double" length="15" scale="2" />
+		<property name="commissionTotal" column="COMMISSION_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="commissionDrawTotal" column="COMMISSION_DRAW_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="commissionInTotal" column="COMMISSION_IN_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="commissionOutTotal" column="COMMISSION_OUT_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="commissionPayTotal" column="COMMISSION_PAY_TOTAL" type="java.lang.Double" length="15" scale="2" />
+
+		<property name="score" column="SCORE" type="java.lang.Double" length="15" scale="2" />
+		<property name="scoreFreeze" column="SCORE_FREEZE" type="java.lang.Double" length="15" scale="2" />
+		<property name="scoreTotal" column="SCORE_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="scoreDrawTotal" column="SCORE_DRAW_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="scoreInTotal" column="SCORE_IN_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="scoreOutTotal" column="SCORE_OUT_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="scorePayTotal" column="SCORE_PAY_TOTAL" type="java.lang.Double" length="15" scale="2" />
+
+		<property name="gold" column="GOLD" type="java.lang.Double" length="15" scale="2" />
+		<property name="goldFreeze" column="GOLD_FREEZE" type="java.lang.Double" length="15" scale="2" />
+		<property name="goldTotal" column="GOLD_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="goldDrawTotal" column="GOLD_DRAW_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="goldInTotal" column="GOLD_IN_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="goldOutTotal" column="GOLD_OUT_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="goldPayTotal" column="GOLD_PAY_TOTAL" type="java.lang.Double" length="15" scale="2" />
+
+		<property name="createTime" column="CREATE_TIME" type="java.util.Date" />
+		<property name="updateTime" column="UPDATE_TIME" type="java.util.Date" />
+	</class>
+</hibernate-mapping>

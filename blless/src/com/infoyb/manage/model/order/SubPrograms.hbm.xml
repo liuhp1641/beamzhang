@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.order.SubPrograms" table="TMS_SUB_PROGRAMS">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_SUB_PROGRAMS</param>
+            </generator>
+        </id>
+
+        <property name="sid" column="SID" type="java.lang.String" length="10"/>
+        <property name="programsOrderId" column="PROGRAMS_ORDER_ID" type="java.lang.String" length="20"/>
+        <property name="subProgramsOrderId" column="SUB_PROGRAMS_ORDER_ID" type="java.lang.String" length="20"/>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="3"/>
+        <property name="playCode" column="PLAY_CODE" type="java.lang.String" length="3"/>
+        <property name="pollCode" column="POLL_CODE" type="java.lang.String" length="50"/>
+        <property name="issue" column="ISSUE" type="java.lang.String" length="45"/>
+        <property name="multiple" column="MULTIPLE" type="java.lang.Integer"/>
+        <property name="amount" column="AMOUNT" type="java.lang.Double"/>
+        <property name="item" column="ITEM" type="java.lang.Integer"/>
+        <property name="ticketCount" column="TICKET_COUNT" type="java.lang.Integer"/>
+        <property name="successTicket" column="SUCCESS_TICKET" type="java.lang.Integer"/>
+        <property name="failureTicket" column="FAILURE_TICKET" type="java.lang.Integer"/>
+        <property name="bonusTicket" column="BONUS_TICKET" type="java.lang.Integer"/>
+        <property name="status" column="STATUS" type="java.lang.Integer" length="1"/>
+        <property name="sendStatus" column="SEND_STATUS" type="java.lang.Integer" length="1"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="sendTime" column="SEND_TIME" type="java.util.Date"/>
+        <property name="returnTime" column="RETURN_TIME" type="java.util.Date"/>
+        <property name="bonusTime" column="BONUS_TIME" type="java.util.Date"/>
+        <property name="fixBonusAmount" column="FIX_BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="postCode" column="POST_CODE" type="java.lang.String" length="10"/>
+        <property name="backup1" column="BACKUP1" type="java.lang.String"/>
+        <property name="backup2" column="BACKUP2" type="java.lang.String"/>
+        <property name="backup3" column="BACKUP3" type="java.lang.String"/>
+
+
+    </class>
+</hibernate-mapping>

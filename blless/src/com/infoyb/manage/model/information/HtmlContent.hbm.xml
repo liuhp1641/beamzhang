@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.information.HtmlContent" table="INFO_HTML_CONTENT">
+        <id name="hid" column="HID"  unsaved-value="null">
+            <generator class="sequence">
+                <param name="sequence">info_html_content_Seq</param>
+            </generator>
+        </id>
+        <property name="htmlCode" column="HTML_CODE" type="java.lang.String"/>
+        <property name="htmlTitle" column="HTML_TITLE" type="java.lang.String"/>
+        <property name="content"  column="CONTENT" type="java.lang.String" /> 
+        <property name="htmlState" column="HTMLSTATE" type="java.lang.Integer"/>
+        <property name="businessType" column="BUSINESSTYPE" type="java.lang.Integer" />
+ 		<property name="isOutLink" column="IS_OUTLINK" type="java.lang.Integer" />
+        <property name="htmlUrl" column="HTML_URL" type="java.lang.String" />
+        <property name="htmlCreateDate" column="HTMLCREATEDATE" type="java.util.Date" />
+        <property name="isOpenApp" column="IS_OPENAPP" type="java.lang.Integer"/>
+        <property name="isAddButton" column="IS_ADDBUTTON" type="java.lang.Integer"/>
+        <property name="appCode" column="APPCODE" type="java.lang.String" />
+        <property name="appPara" column="APPPARA" type="java.lang.String" />
+        <property name="buttonText" column="BUTTONTEXT" type="java.lang.String" />
+        <property name="isShare" column="IS_SHARE" type="java.lang.Integer"/>
+        
+    </class>
+</hibernate-mapping>

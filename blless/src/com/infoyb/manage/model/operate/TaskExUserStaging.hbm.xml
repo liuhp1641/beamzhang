@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cm.manage.model.operate.TaskExUserStaging" table="TASK_EX_USER_STAGING">
+		<id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_TASK_EX_USER_STAGING</param>
+			</generator>
+		</id>
+		<property name="userCode" column="USER_CODE" type="java.lang.String" length="30" />
+		<property name="userExchangeId" column="USER_EXCHANGE_ID" type="java.lang.String" length="30" />
+		<property name="exchangeId" column="EXCHANGE_ID" type="java.lang.String" length="30" />
+		<property name="exchangeDetailId" column="EXCHANGE_DETAIL_ID" type="java.lang.String" length="30" />
+		<property name="returnAccountType" column="RETURN_ACCOUNT_TYPE" type="java.lang.Integer" />
+		<property name="returnAmount" column="RETURN_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="returnDate" column="RETURN_DATE" type="java.util.Date" />
+		<property name="status" column="STATUS" type="java.lang.Integer" />
+		<property name="exchangeUserCode" column="EXCHANGE_USER_CODE" type="java.lang.String" length="30" />
+		<property name="updateTime" column="UPDATE_TIME" type="java.util.Date" />
+		<property name="createTime" column="CREATE_TIME" type="java.util.Date" />
+	</class>
+</hibernate-mapping>

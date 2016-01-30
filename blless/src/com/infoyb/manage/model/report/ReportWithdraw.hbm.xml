@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cm.manage.model.report.ReportWithdraw" table="REPORT_WITHDRAW" >
+        <id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_REPORT_WITHDRAW</param>
+			</generator>
+		</id>
+        <property name="reportDate" column="REPORT_DATE" type="java.util.Date" />
+		<property name="sumApplyWithdraw" column="SUM_APPLY_WITHDRAW" type="java.lang.Double" length="15" scale="2" />
+		<property name="withholdHandlingCharge" column="WITHHOLD_HANDLING_CHARGE" type="java.lang.Double" length="15" scale="2" />
+		<property name="actualTransferAmount" column="ACTUAL_TRANSFER_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+    </class>
+</hibernate-mapping>
+

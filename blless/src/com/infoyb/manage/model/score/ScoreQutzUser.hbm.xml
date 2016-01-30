@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cm.manage.model.score.ScoreQutzUser" table="SCORE_QUTZ_USER">
+		<id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_SCORE_QUTZ_USER</param>
+			</generator>
+		</id>
+		<property name="qutzUserId" column="QUTZ_USER_ID" type="java.lang.String" length="30" />
+		<property name="qutzId" column="QUTZ_ID" type="java.lang.String" length="30" />
+		<property name="optionId" column="OPTION_ID" type="java.lang.String" length="30" />
+		<property name="userCode" column="USER_CODE" type="java.lang.String" length="30" />
+		<property name="qutzIssue" column="QUTZ_ISSUE" type="java.lang.String" length="30" />
+		<property name="optionOrder" column="OPTION_ORDER" type="java.lang.Integer" />
+		<property name="amount" column="AMOUNT" type="java.lang.Double" />
+		<property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double" />
+		<property name="status" column="STATUS" type="java.lang.Integer" />
+		<property name="createTime" column="CREATE_TIME" type="java.util.Date" />
+		<property name="updateTime" column="UPDATE_TIME" type="java.util.Date" />
+		<property name="bonusTime" column="BONUS_TIME" type="java.util.Date" />
+	</class>
+</hibernate-mapping>

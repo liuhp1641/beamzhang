@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.information.Theme" table="INFO_THEME">
+        <id name="tid" column="TID"  unsaved-value="null">
+            <generator class="sequence">
+                <param name="sequence">info_theme_Seq</param>
+            </generator>
+        </id>
+        <property name="theme_code" column="THEME_CODE" type="java.lang.String"/>
+        <property name="user_Id" column="USER_ID" type="java.lang.String"/>
+        <property name="createDate" column="CREATEDATE" type="java.util.Date"/>
+        <property name="publishDate" column="PUBLISHDATE" type="java.util.Date"/>
+        <property name="onlineDate" column="ONLINEDATE" type="java.util.Date" />
+ 		<property name="offLineDate" column="OFFLINEDATE" type="java.util.Date" />
+        <property name="themeTitle" column="THEME_TITLE" type="java.lang.String" />
+        <property name="describe" column="DESCRIBE" type="java.lang.String" />
+        <property name="state" column="STATE" type="java.lang.Integer"/>
+        <property name="style" column="style" type="java.lang.Integer"/>
+        	<property name="pictureUrl" column="PICTURE_URL" type="java.lang.String" />
+        <property name="programType" column="PROGRAM_TYPE" type="java.lang.Integer" />
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String"/>
+        	<property name="hidden_flag" column="HIDDEN_FLAG" type="java.lang.Integer" />
+        <property name="htmlCode" column="HTML_CODE" type="java.lang.String" />
+        <property name="parent_Code" column="PARENT_CODE" type="java.lang.String" />
+        <property name="isRecommend" column="IS_RECOMMEND" type="java.lang.Integer"/>
+        <property name="isAllCooperation" column="IS_ALL_COOPERATION" type="java.lang.Integer" />
+        <property name="isTop" column="IS_TOP" type="java.lang.Integer"/>
+        <property name="weight" column="WEIGHT" type="java.lang.Integer" />
+        <property name="activityState" column="ACTIVITYSTATE" type="java.lang.Integer"/>
+        <property name="headStyle" column="HEADSTYLE" type="java.lang.Integer"/>
+        <property name="platform" column="PLATFORM" type="java.lang.String" />
+        <property name="isAllSV" column="IS_ALL_SV" type="java.lang.Integer"/>
+    </class>
+</hibernate-mapping>

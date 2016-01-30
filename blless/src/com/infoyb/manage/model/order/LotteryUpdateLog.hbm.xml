@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.order.LotteryUpdateLog" table="TMS_LOTTERY_UPDATE_LOG">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_LOTTERY_UPDATE_LOG</param>
+            </generator>
+        </id>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="50"/>
+        <property name="sid" column="SID" type="java.lang.String" length="10"/>
+        <property name="platform" column="PLATFORM" type="java.lang.String"/>
+        <property name="version" column="VERSION"  type="java.lang.String" length="50"/>
+        <property name="memo" column="MEMO"  type="java.lang.String" length="255"/>
+        <property name="operator" column="OPERATOR" type="java.lang.String" length="50"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+    </class>
+</hibernate-mapping>

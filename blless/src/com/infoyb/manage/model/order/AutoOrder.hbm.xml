@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.order.AutoOrder" table="TMS_AUTO_ORDER">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_AUTO_ORDER</param>
+            </generator>
+        </id>
+
+        <property name="sid" column="SID" type="java.lang.String" length="20"/>
+        <property name="userCode" column="USER_CODE" type="java.lang.String" length="20"/>
+        <property name="autoOrderId" column="AUTO_ORDER_ID" type="java.lang.String" length="20"/>
+        <property name="outOrderId" column="OUT_ORDER_ID" type="java.lang.String" length="20"/>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="3"/>
+        <property name="playCode" column="PLAY_CODE" type="java.lang.String" length="3"/>
+        <property name="startIssue" column="START_ISSUE" type="java.lang.String" length="20"/>
+        <property name="endIssue" column="END_ISSUE" type="java.lang.String" length="20"/>
+        <property name="totalIssue" column="TOTAL_ISSUE" type="java.lang.Integer"/>
+        <property name="successIssue" column="SUCCESS_ISSUE" type="java.lang.Integer"/>
+        <property name="completeAmount" column="COMPLETE_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="failureIssue" column="FAILURE_ISSUE" type="java.lang.Integer"/>
+        <property name="cancelIssue" column="CANCEL_ISSUE" type="java.lang.Integer"/>
+        <property name="orderStatus" column="ORDER_STATUS" type="java.lang.Integer"/>
+        <property name="orderAmount" column="ORDER_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="bonusStatus" column="BONUS_STATUS" type="java.lang.Integer"/>
+        <property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double"/>
+        <property name="winStop" column="WIN_STOP" type="java.lang.Integer"/>
+        <property name="winAmount" column="WIN_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="acceptTime" column="ACCEPT_TIME" type="java.util.Date"/>
+        <property name="platform" column="PLATFORM" type="java.lang.String"/>
+        <property name="softVer" column="SOFT_VER" type="java.lang.String" length="20"/>
+        <property name="fixBonusAmount" column="FIX_BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+
+        <property name="isHide" column="IS_HIDE" type="java.lang.Integer"/>
+        <property name="isVerify" column="IS_VERIFY" type="java.lang.Integer"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.order.TradeLog" table="TMS_TRADE_LOG">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_TRADE_LOG</param>
+            </generator>
+        </id>
+
+
+        <property name="userCode" column="USER_CODE" type="java.lang.String" length="20"/>
+        <property name="programsOrderId" column="PROGRAMS_ORDER_ID" type="java.lang.String" length="20"/>
+        <property name="orderId" column="ORDER_ID" type="java.lang.String" length="20"/>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="3"/>
+        <property name="issue" column="ISSUE" type="java.lang.String" length="45"/>
+        <property name="sn" column="SN" type="java.lang.String" length="20"/>
+        <property name="eventCode" column="EVENT_CODE" type="java.lang.String" length="20"/>
+        <property name="amount" column="AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="status" column="STATUS" type="java.lang.Integer"/>
+        <property name="presentAmount" column="PRESENT_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="cashAmount" column="CASH_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="acceptTime" column="ACCEPT_TIME" type="java.util.Date"/>
+        <property name="memo" column="MEMO" type="java.lang.String" length="200"/>
+    </class>
+</hibernate-mapping>

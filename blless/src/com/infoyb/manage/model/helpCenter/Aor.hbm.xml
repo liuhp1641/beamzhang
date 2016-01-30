@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.helpCenter.Aor" table="HC_ANSWER_OR_REQUESTION">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">hc_Answer_Or_ReQuestion_id</param>
+            </generator>
+        </id>
+        <property name="userCode" column="USER_CODE" type="java.lang.String"/>
+        <property name="sysUserId" column="SYS_USER_ID" type="java.lang.String"/>
+        <property name="createDate" column="CreateDate" type="java.util.Date"/>
+        <property name="content" column="Content" type="java.lang.String"/>
+        <property name="questionId" column="QUESTION_ID" type="java.lang.Long" />
+ 		<property name="parentId" column="PARENT_ID" type="java.lang.Long" />
+        <property name="state" column="State" type="java.lang.Integer" />
+        <property name="remark" column="remark" type="java.lang.String" />
+        <property name="hiddenFlag" column="Hidden_flag" type="java.lang.Integer"/>
+    </class>
+</hibernate-mapping>

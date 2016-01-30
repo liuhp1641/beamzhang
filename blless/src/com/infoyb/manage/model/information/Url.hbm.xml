@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.information.Url" table="INFO_URL">
+        <id name="id" column="ID"  unsaved-value="null">
+            <generator class="sequence">
+                <param name="sequence">info_url_Seq</param>
+            </generator>
+        </id>
+        <property name="code" column="URL_CODE" type="java.lang.String"/>
+        <property name="name" column="URL_NAME" type="java.lang.String"/>
+        <property name="type" column="URL_TYPE" type="java.lang.String"/>
+        <property name="urlPath" column="URL_PATH" type="java.lang.String"/>
+       	<property name="createDate" column="CREATEDATE" type="java.util.Date"/>
+       	<property name="urlCode" column="PROGRAM_TYPE" type="java.lang.String"/>
+    </class>
+</hibernate-mapping>

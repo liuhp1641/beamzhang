@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.sms.Sms" table="USER_SMS">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_USER_SMS</param>
+            </generator>
+        </id>
+        <property name="mobile" column="MOBILE" type="java.lang.String" length="50"/>
+        <property name="model" column="MODEL" type="java.lang.String" length="20"/>
+        <property name="type" column="TYPE" type="java.lang.String" length="20"/>
+        <property name="templateId" column="TEMPLATE_ID" type="java.lang.String" length="20"/>
+        <property name="body" column="BODY" type="java.lang.String"/>
+        <property name="status" column="STATUS" type="java.lang.Integer" length="1"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="sendTime" column="SEND_TIME" type="java.util.Date"/>
+        <property name="operator" column="OPERATOR" type="java.lang.String" length="50"/>
+        <property name="memo" column="MEMO" type="java.lang.String" length="200"/>
+    </class>
+</hibernate-mapping>

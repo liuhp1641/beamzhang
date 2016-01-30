@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cm.manage.model.report.ReportRecharge" table="REPORT_RECHARGE">
+		<id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_REPORT_RECHARGE</param>
+			</generator>
+		</id>
+		<property name="reportDate" column="REPORT_DATE" type="java.util.Date" />
+		<property name="zhiFuBao" column="ZHI_FU_BAO" type="java.lang.Double" length="15" scale="2" />
+		<property name="baiFuBao" column="BAI_FU_BAO" type="java.lang.Double" length="15" scale="2" />
+		<property name="lianLianZhifu" column="LIAN_LIAN_ZHIFU" type="java.lang.Double" length="15" scale="2" />
+		<property name="shenZhouFu" column="SHEN_ZHOU_FU" type="java.lang.Double" length="15" scale="2" />
+		<property name="xianxiRecharge" column="XIANXI_RECHARGE" type="java.lang.Double" length="15" scale="2" />
+		<property name="sumRecharge" column="SUM_RECHARGE" type="java.lang.Double" length="15" scale="2" />
+		<property name="zhiFuBaoWap" column="ZHI_FU_BAO_WAP" type="java.lang.Double" length="15" scale="2" />
+		<property name="baiFuBaoWap" column="BAI_FU_BAO_WAP" type="java.lang.Double" length="15" scale="2" />
+	</class>
+</hibernate-mapping>

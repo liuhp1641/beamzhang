@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.order.Order" table="TMS_ORDER">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_ORDER</param>
+            </generator>
+        </id>
+        <property name="outOrderId" column="OUT_ORDER_ID" type="java.lang.String" length="50"/>
+        <property name="sid" column="SID" type="java.lang.String" length="45"/>
+        <property name="userCode" column="USER_CODE" type="java.lang.String" length="20"/>
+        <property name="presentedUserCode" column="PRESENTED_USER_CODE" type="java.lang.String" length="20"/>
+        <property name="userInfo" column="USER_INFO" type="java.lang.String" length="50"/>
+        <property name="orderId" column="ORDER_ID" type="java.lang.String" length="20"/>
+        <property name="programsOrderId" column="PROGRAMS_ORDER_ID" type="java.lang.String" length="20"/>
+        <property name="orderStatus" column="ORDER_STATUS" type="java.lang.Integer" length="1"/>
+        <property name="orderType" column="ORDER_TYPE" type="java.lang.Integer" length="1"/>
+        <property name="orderAmount" column="ORDER_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="buyWere" column="BUY_WERE" type="java.lang.Integer"/>
+        <property name="bonusStatus" column="BONUS_STATUS" type="java.lang.Integer"/>
+        <property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="acceptTime" column="ACCEPT_TIME" type="java.util.Date"/>
+        <property name="platform" column="PLATFORM" type="java.lang.String"/>
+        <property name="softVer" column="SOFT_VER" type="java.lang.String" length="20"/>
+        <property name="fixBonusAmount" column="FIX_BONUS_AMOUNT" type="java.lang.Double"/>
+        <property name="isHide" column="IS_HIDE" type="java.lang.Integer"/>
+        <property name="isVerify" column="IS_VERIFY" type="java.lang.Integer"/>
+    </class>
+</hibernate-mapping>

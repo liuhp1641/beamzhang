@@ -1,0 +1,117 @@
+<account>
+	<first type="0" name="入帐">
+		<second type="00" name="存入" body="平台内帐户与第三方之间的入帐操作">
+			<third type="00" name="充值">
+				<fouth type="00" nickName="充值" />
+				<fouth type="01" nickName="支付宝充值" />
+				<fouth type="02" nickName="储蓄卡充值" />
+				<fouth type="03" nickName="电话卡充值" />
+				<fouth type="04" nickName="连连付充值" />
+				<fouth type="05" nickName="百付宝充值" />
+				<fouth type="06" nickName="信用卡充值" />
+				<fouth type="07" nickName="公司充值" />
+			</third>
+			<third type="01" name="退款">
+				<fouth type="00" nickName="代购失败" />
+				<fouth type="01" nickName="部分退款" />
+				<fouth type="02" nickName="合买撤单" />
+				<fouth type="03" nickName="合买撤单" />
+				<fouth type="04" nickName="追号撤单" />
+				<fouth type="05" nickName="追号撤单" />
+				<fouth type="06" nickName="保底退还" />
+			</third>
+			<third type="02" name="返奖">
+				<fouth type="00" nickName="代购派奖" />
+				<fouth type="01" nickName="合买派奖" />
+				<fouth type="02" nickName="追号派奖" />
+				<fouth type="03" nickName="补单返奖" />
+			</third>
+			<third type="03" name="返佣">
+				<fouth type="00" nickName="合买返佣" />
+			</third>
+			<third type="04" name="提现">
+				<fouth type="00" nickName="提现驳回" />
+			</third>
+		</second>
+
+		<second type="01" name="转入" body="平台内帐户与平台内帐的入帐操作">
+			<third type="00" name="普通转入">
+				<fouth type="00" nickName="转入" />
+				<fouth type="01" nickName="充值" />
+			</third>
+			<third type="01" name="赔偿转入">
+				<fouth type="00" nickName="转入" />
+			</third>
+			<third type="02" name="活动转入">
+				<fouth type="00" nickName="活动转入" />
+				<fouth type="01" nickName="活动奖励" />
+			</third>
+			<third type="03" name="任务转入">
+				<fouth type="00" nickName="任务奖励" />
+			</third>
+			<third type="04" name="竞猜转入">
+				<fouth type="00" nickName="竞猜奖励" />
+				<fouth type="01" nickName="竞猜参与" />
+			</third>
+			<third type="05" name="冻结转入">
+				<fouth type="00" nickName="冻结转入" />
+			</third>
+			<third type="06" name="商城转入">
+				<fouth type="00" nickName="商城转入" />
+				<fouth type="01" nickName="商城返利" />
+			</third>
+			<third type="07" name="分享转入">
+				<fouth type="00" nickName="分享奖励" />
+			</third>
+		</second>
+	</first>
+
+	<first type="1" name="出帐">
+		<second type="00" name="支出" body="平台内帐户与第三方之间的出帐操作">
+			<third type="00" name="购彩">
+				<fouth type="00" nickName="彩票代购" />
+				<fouth type="01" nickName="彩票追号" />
+				<fouth type="02" nickName="彩票合买" />
+				<fouth type="03" nickName="合买保底" />
+				<fouth type="04" nickName="系统补单" />
+			</third>
+			<third type="01" name="提现">
+				<fouth type="00" nickName="提现" />
+				<fouth type="01" nickName="公司冲正" />
+			</third>
+			<third type="02" name="手续费">
+				<fouth type="00" nickName="提现手续费" />
+			</third>
+		</second>
+
+		<second type="01" name="转出" body="平台内帐户与平台内帐的出帐操作">
+			<third type="00" name="普通转出">
+				<fouth type="00" nickName="转出" />
+				<fouth type="01" nickName="大额转账" />
+			</third>
+			<third type="01" name="赔偿转出">
+				<fouth type="00" nickName="转出" />
+			</third>
+			<third type="02" name="活动转出">
+				<fouth type="00" nickName="活动转出" />
+			</third>
+			<third type="03" name="任务转出">
+				<fouth type="00" nickName="任务转出" />
+			</third>
+			<third type="04" name="竞猜转出">
+				<fouth type="00" nickName="竞猜消费" />
+				<fouth type="01" nickName="竞猜返奖" />
+			</third>
+			<third type="05" name="冻结转出">
+				<fouth type="00" nickName="解冻转出" />
+			</third>
+			<third type="06" name="商城转出">
+				<fouth type="00" nickName="商城转出" />
+				<fouth type="01" nickName="商城消费" />
+			</third>
+			<third type="07" name="分享转出">
+				<fouth type="00" nickName="分享转出" />
+			</third>
+		</second>
+	</first>
+</account>

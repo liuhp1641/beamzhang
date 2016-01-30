@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.operate.TaskInfo" table="TASK_INFO">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_SYS_TASK</param>
+            </generator>
+        </id>
+        <property name="taskId" column="TASK_ID" type="java.lang.String" length="30"/>
+        <property name="name" column="NAME" type="java.lang.String" length="30"/>
+        <property name="describe" column="DESCRIBE" type="java.lang.String" length="200"/>
+        <property name="startTime" column="START_TIME" type="java.util.Date"/>
+        <property name="endTime" column="END_TIME" type="java.util.Date"/>
+        <property name="type" column="TYPE" type="java.lang.Integer" length="1"/>
+        <property name="status" column="STATUS" type="java.lang.Integer" length="1"/>
+        <property name="taskOrder" column="TASK_ORDER" type="java.lang.Integer" length="4"/>
+        <property name="dateLimitDesc" column="DATELIMIT_DESC" type="java.lang.String" length="200"/>
+        <property name="displayCondition" column="DISPLAY_CONDITION" type="java.lang.Integer" length="1"/>
+        <property name="receiveTimes" column="RECEIVE_TIMES" type="java.lang.Integer" length="4"/>
+        <property name="isProgressDisplay" column="IS_PROGRESS_DISPLAY" type="java.lang.Integer" length="1"/>
+        <property name="hasPrefixCondition" column="HAS_PREFIX_CONDITION" type="java.lang.Integer" length="1"/>
+        <property name="rewardDescribe" column="REWARD_DESCRIBE" type="java.lang.String" length="255"/>
+        <property name="taskDetail" column="TASK_DETAIL" type="java.lang.String" length="255"/>
+        <property name="rewardTarget" column="REWARD_TARGET" type="java.lang.String" length="50"/>
+        <property name="completeNum" column="COMPLETE_NUM" type="java.lang.Integer" length="2"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+    </class>
+</hibernate-mapping>

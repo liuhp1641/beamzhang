@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.operate.TaskPost" table="TASK_POST_CONDITION">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_SYS_TASK_POST</param>
+            </generator>
+        </id>
+        <property name="taskId" column="TASK_ID" type="java.lang.String" length="30"/>
+        <property name="type" column="TYPE" type="java.lang.Integer" length="1"/>
+        <property name="times" column="times" type="java.lang.Integer" length="5"/>
+        <property name="amount" column="AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="totalAmount" column="TOTAL_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="firstAmount" column="FIRST_AMOUNT" type="java.lang.Double" length="15" scale="2"/> 
+        <property name="completeFlag" column="COMPLETE_FLAG" type="java.lang.Integer" length="5"/>
+        <property name="lotteryType" column="LOTTERY_TYPE" type="java.lang.String" length="20"/>
+        <property name="lotteryTypeName" column="LOTTERY_TYPE_NAME" type="java.lang.String" length="50"/>
+        <property name="vipRank" column="VIP_RANK" type="java.lang.Integer" length="1"/>
+        <property name="amountHigh" column="AMOUNT_HIGH" type="java.lang.Double" length="15" scale="2"/>
+        <property name="firstAmountHigh" column="FIRST_AMOUNT_HIGH" type="java.lang.Double" length="15" scale="2"/>
+        <property name="buyType" column="BUY_TYPE" type="java.lang.Integer" length="1"/>
+        <property name="firstNoLottery" column="FIRST_NO_LOTTERY" type="java.lang.Integer" length="1"/> 
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+    </class>
+</hibernate-mapping>

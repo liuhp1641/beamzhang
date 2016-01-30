@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.order.HandworkBonus" table="TMS_HANDWORK_BONUS">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_HANDWORK_BONUS</param>
+            </generator>
+        </id>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="3"/>
+        <property name="issue" column="ISSUE" type="java.lang.String" length="20"/>
+        <property name="userCode" column="USER_CODE" type="java.lang.String" length="20"/>
+        <property name="userName" column="USER_NAME" type="java.lang.String" length="50"/>
+        <property name="programsOrderId" column="PROGRAMS_ORDER_ID" type="java.lang.String" length="50"/>
+        <property name="orderAmount" column="ORDER_AMOUNT" type="java.lang.Double"/>
+        <property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double"/>
+        <property name="fixBonusAmount" column="FIX_BONUS_AMOUNT" type="java.lang.Double"/>
+        <property name="bigBonus" column="BIG_BONUS" type="java.lang.Integer"/>
+        <property name="status" column="STATUS" type="java.lang.Integer"/>
+        <property name="operator" column="operator" type="java.lang.String" length="50"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="acceptTime" column="ACCEPT_TIME" type="java.util.Date"/>
+    </class>
+</hibernate-mapping>

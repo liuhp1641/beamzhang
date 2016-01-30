@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.share.ShareInfo" table="SHARE_INFO">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_SHARE_INFO</param>
+            </generator>
+        </id>
+        <property name="shareId" column="SHARE_ID" type="java.lang.String" length="30"/>
+        <property name="shareName" column="SHARE_NAME" type="java.lang.String" length="50"/>
+        <property name="shareType" column="SHARE_TYPE" type="java.lang.String" length="10"/>
+        <property name="shareUrl" column="SHARE_URL" type="java.lang.String" length="255"/>
+        <property name="privateKey" column="PRIVATE_KEY" type="java.lang.String" length="50"/>
+        <property name="outUserCode" column="OUT_USER_CODE" type="java.lang.String" length="30"/>
+        <property name="rewardTimes" column="REWARD_TIMES" type="java.lang.Integer"/>
+        <property name="status" column="STATUS" type="java.lang.Integer"/>
+
+        <property name="shareTitle" column="SHARE_TITLE" type="java.lang.String" length="100"/>
+        <property name="shareContent" column="SHARE_CONTENT" type="java.lang.String" length="200"/>
+        <property name="shareImgUrl" column="SHARE_IMG_URL" type="java.lang.String" length="200"/>
+
+        <property name="startTime" column="START_TIME" type="java.util.Date"/>
+        <property name="endTime" column="END_TIME" type="java.util.Date"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="updateTime" column="UPDATE_TIME" type="java.util.Date"/>
+    </class>
+</hibernate-mapping>

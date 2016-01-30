@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.order.LotteryControl" table="TMS_LOTTERY_CONTROL">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_LOTTERY_CONTROL</param>
+            </generator>
+        </id>
+        <property name="lotteryName" column="LOTTERY_NAME" type="java.lang.String" length="50"/>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="50"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="status" column="STATUS" type="java.lang.Integer" length="1"/>
+        <property name="sendStatus" column="SEND_STATUS" type="java.lang.Integer" length="1"/>
+        <property name="sort" column="SORT" type="java.lang.Integer"/>
+        <property name="memo" column="MEMO" type="java.lang.String" length="255"/>
+        <property name="mark" column="MARK" type="java.lang.String" length="255"/>
+        <property name="tips" column="TIPS" type="java.lang.String" length="255"/>
+        <property name="delayTime" column="DELAY_TIME" type="java.lang.Integer"/>
+    </class>
+</hibernate-mapping>

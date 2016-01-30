@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cm.manage.model.score.ScoreQutzType" table="SCORE_QUTZ_TYPE">
+		<id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_SCORE_QUTZ_TYPE</param>
+			</generator>
+		</id>
+		<property name="qutzTypeId" column="QUTZ_TYPE_ID" type="java.lang.String" length="30" />
+		<property name="qutzTypeName" column="QUTZ_TYPE_NAME" type="java.lang.String" length="255" />
+		<property name="bonusType" column="BONUS_TYPE" type="java.lang.Integer" />
+		<property name="bonusUserCode" column="BONUS_USER_CODE" type="java.lang.String" length="30" />
+		<property name="createTime" column="CREATE_TIME" type="java.util.Date" />
+		<property name="updateTime" column="UPDATE_TIME" type="java.util.Date" />
+		
+		<property name="issueCode" column="ISSUE_CODE" type="java.lang.String" length="10" />
+	</class>
+</hibernate-mapping>

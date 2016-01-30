@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.share.ShareUserInfo" table="SHARE_USER_INFO">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_SHARE_USER_INFO</param>
+            </generator>
+        </id>
+        <property name="shareId" column="SHARE_ID" type="java.lang.String" length="30"/>
+        <property name="shareName" column="SHARE_NAME" type="java.lang.String" length="50"/>
+        <property name="shareType" column="SHARE_TYPE" type="java.lang.String" length="10"/>
+        <property name="shareUserId" column="SHARE_USER_ID" type="java.lang.String" length="30"/>
+        <property name="privateKey" column="PRIVATE_KEY" type="java.lang.String" length="50"/>
+        <property name="userCode" column="USER_CODE" type="java.lang.String" length="30"/>
+        <property name="userCount" column="USER_COUNT" type="java.lang.Integer"/>
+        <property name="accountType" column="ACCOUNT_TYPE" type="java.lang.Integer"/>
+        <property name="amount" column="AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="10" />
+        <property name="extraLot" column="EXTRA_LOT" type="java.lang.Integer"/>
+        <property name="extraAmount" column="EXTRA_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="extraScore" column="EXTRA_SCORE" type="java.lang.Double" length="15" scale="2"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="updateTime" column="UPDATE_TIME" type="java.util.Date"/>
+        <property name="bonusTime" column="BONUS_TIME" type="java.util.Date"/>
+    </class>
+</hibernate-mapping>

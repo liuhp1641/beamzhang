@@ -1,0 +1,32 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:amq="http://activemq.apache.org/schema/core"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jms="http://www.springframework.org/schema/jms"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+     http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core.xsd http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd">
+
+
+    <description>JMS settings</description>
+
+    <!-- ActiveMQ 连接工厂 -->
+    <bean id="topicSendConnectionFactory" class="org.apache.activemq.spring.ActiveMQConnectionFactory">
+        <property name="brokerURL" value="${JMS.TOPIC.BROKER.URL}"/>
+        <property name="useAsyncSend" value="true"/>
+    </bean>
+
+    <!-- Spring Caching 连接工厂 -->
+    <bean id="topicSendCachingConnectionFactory" class="org.springframework.jms.connection.CachingConnectionFactory">
+        <property name="targetConnectionFactory" ref="topicSendConnectionFactory"/>
+        <property name="sessionCacheSize" value="${JMS.SESSIONCACHE.SIZE}"/>
+    </bean>
+
+    <!-- 外发通道 -->
+    <amq:topic id="draw_topic_msg" physicalName="${jms.topic.draw.msg}"/>
+
+    <bean id="drawJmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="topicSendCachingConnectionFactory"/>
+        <property name="defaultDestination" ref="draw_topic_msg"/>
+        <!-- 订阅发布模式 -->
+        <property name="pubSubDomain" value="true"/>
+    </bean>
+
+</beans>

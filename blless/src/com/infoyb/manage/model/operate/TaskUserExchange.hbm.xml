@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cm.manage.model.operate.TaskUserExchange" table="TASK_USER_EXCHANGE">
+		<id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_TASK_USER_EXCHANGE</param>
+			</generator>
+		</id>
+		<property name="sid" column="SID" type="java.lang.String" length="30" />
+		<property name="userCode" column="USER_CODE" type="java.lang.String" length="30" />
+		<property name="userExchangeId" column="USER_EXCHANGE_ID" type="java.lang.String" length="30" />
+		<property name="exchangeId" column="EXCHANGE_ID" type="java.lang.String" length="30" />
+		<property name="exchangeDetailId" column="EXCHANGE_DETAIL_ID" type="java.lang.String" length="30" />
+		<property name="outAccountType" column="OUT_ACCOUNT_TYPE" type="java.lang.Integer" />
+		<property name="outAmount" column="OUT_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="inAccountType" column="IN_ACCOUNT_TYPE" type="java.lang.Integer" />
+		<property name="inAmount" column="IN_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="exchangeUserCode" column="EXCHANGE_USER_CODE" type="java.lang.String" length="30" />
+		<property name="ip" column="IP" type="java.lang.String" length="30" />
+		<property name="machineCode" column="MACHINE_CODE" type="java.lang.String" length="30" />
+		<property name="createTime" column="CREATE_TIME" type="java.util.Date" />
+		<property name="returnNumbers" column="RETURN_NUMBERS" type="java.lang.Integer" />
+	</class>
+</hibernate-mapping>

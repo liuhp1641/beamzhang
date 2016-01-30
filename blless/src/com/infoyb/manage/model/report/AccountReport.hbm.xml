@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cm.manage.model.report.AccountReport" table="REPORT_ACCOUNT">
+		<id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_REPORT_ACCOUNT</param>
+			</generator>
+		</id>
+		<property name="logDay" column="LOG_DAY" type="java.lang.String" length="30"/>
+		<property name="eventType" column="EVENT_TYPE" type="java.lang.Integer" length="1" />
+		<property name="secondType" column="SECOND_TYPE" type="java.lang.String" length="5" />
+		<property name="rechargeAmount" column="RECHARGE_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="presentAmount" column="PRESENT_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="commission" column="COMMISSION" type="java.lang.Double" length="15" scale="2" />
+		<property name="score" column="SCORE" type="java.lang.Double" length="15" scale="2" />
+		<property name="gold" column="GOLD" type="java.lang.Double" length="15" scale="2" />
+		<property name="memberType" column="MEMBER_TYPE" type="java.lang.Integer"/>
+		<property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+	</class>
+</hibernate-mapping>

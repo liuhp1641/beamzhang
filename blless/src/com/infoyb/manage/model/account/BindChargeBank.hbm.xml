@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cm.manage.model.account.BindChargeBank" table="ACCOUNT_BIND_CHARGE_BANK">
+		<id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_ACCOUNT_BIND_CHARGE_BANK</param>
+			</generator>
+		</id>
+		<property name="userCode" column="USER_CODE" type="java.lang.String" length="20" />
+		<property name="province" column="PROVINCE" type="java.lang.String" length="50" />
+		<property name="city" column="CITY" type="java.lang.String" length="50" />
+		<property name="subBank" column="SUB_BANK" type="java.lang.String" length="50" />
+		<property name="bankName" column="BANK_NAME" type="java.lang.String" length="50" />
+		<property name="bankCode" column="BANK_CODE" type="java.lang.String" length="50" />
+		<property name="easyFlag" column="EASY_FLAG" type="java.lang.Integer" />
+		<property name="createTime" column="CREATE_TIME" type="java.util.Date" />
+		<property name="updateTime" column="UPDATE_TIME" type="java.util.Date" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.order.Programs" table="TMS_PROGRAMS">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_PROGRAMS</param>
+            </generator>
+        </id>
+
+        <property name="sid" column="SID" type="java.lang.String" length="10"/>
+        <property name="autoOrderId" column="AUTO_ORDER_ID" type="java.lang.String" length="20"/>
+        <property name="programsOrderId" column="PROGRAMS_ORDER_ID" type="java.lang.String" length="20"/>
+        <property name="outOrderId" column="OUT_ORDER_ID" type="java.lang.String" length="20"/>
+        <property name="orderId" column="ORDER_ID" type="java.lang.String" length="20"/>
+        <property name="userCode" column="USER_CODE" type="java.lang.String" length="20"/>
+        <property name="presentedUserCode" column="PRESENTED_USER_CODE" type="java.lang.String" length="20"/>
+        <property name="issue" column="ISSUE" type="java.lang.String" length="45"/>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="3"/>
+        <property name="playCode" column="PLAY_CODE" type="java.lang.String" length="50"/>
+        <property name="pollCode" column="POLL_CODE" type="java.lang.String" length="50"/>
+        <property name="title" column="TITLE" type="java.lang.String" length="255"/>
+        <property name="buyType" column="BUY_TYPE" type="java.lang.Integer" length="1"/>
+        <property name="numberInfo" column="NUMBER_INFO" type="org.hibernate.type.TextType"/>
+        <property name="userInfo" column="USER_INFO" type="java.lang.String" length="50"/>
+        <property name="orderStatus" column="ORDER_STATUS" type="java.lang.Integer" length="1"/>
+        <property name="sendStatus" column="SEND_STATUS" type="java.lang.Integer" length="1"/>
+        <property name="bonusStatus" column="BONUS_STATUS" type="java.lang.Integer" length="1"/>
+        <property name="privacy" column="PRIVACY" type="java.lang.Integer" length="1"/>
+        <property name="item" column="ITEM" type="java.lang.Integer"/>
+        <property name="multiple" column="MULTIPLE" type="java.lang.Integer"/>
+
+        <property name="totalWere" column="TOTAL_WERE" type="java.lang.Integer"/>
+        <property name="buyWere" column="BUY_WERE" type="java.lang.Integer"/>
+        <property name="minWere" column="MIN_WERE" type="java.lang.Integer"/>
+        <property name="lastWere" column="LAST_WERE" type="java.lang.Integer"/>
+        <property name="commission" column="COMMISSION" type="java.lang.Integer"/>
+        <property name="description" column="DESCRIPTION" type="java.lang.String" length="255"/>
+
+        <property name="orderAmount" column="ORDER_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="avgAmount" column="AVG_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="buyAmount" column="BUY_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="lastAmount" column="LAST_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+
+        <property name="fixBonusAmount" column="FIX_BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="ticketCount" column="TICKET_COUNT" type="java.lang.Integer"/>
+        <property name="bonusTicket" column="BONUS_TICKET" type="java.lang.Integer"/>
+        <property name="successTicket" column="SUCCESS_TICKET" type="java.lang.Integer"/>
+        <property name="failureTicket" column="FAILURE_TICKET" type="java.lang.Integer"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="acceptTime" column="ACCEPT_TIME" type="java.util.Date"/>
+        <property name="platform" column="PLATFORM" type="java.lang.String"/>
+        <property name="softVer" column="SOFT_VER" type="java.lang.String" length="20"/>
+        <property name="bonusToAccount" column="BONUS_TO_ACCOUNT" type="java.lang.Integer"/>
+        <property name="bigBonus" column="BIG_BONUS" type="java.lang.Integer"/>
+        <property name="isTop" column="IS_TOP" type="java.lang.Integer"/>
+        <property name="backup1" column="BACKUP1" type="java.lang.String" length="255"/>
+        <property name="backup2" column="BACKUP2" type="java.lang.String" length="255"/>
+        <property name="backup3" column="BACKUP3" type="java.lang.String" length="255"/>
+
+        <property name="gameStartId" column="GAME_START_ID" type="java.lang.String" length="10"/>
+        <property name="gameStartTime" column="GAME_START_TIME" type="java.util.Date"/>
+        <property name="gameEndId" column="GAME_END_ID" type="java.lang.String" length="10"/>
+        <property name="gameEndTime" column="GAME_END_TIME" type="java.util.Date"/>
+
+        <property name="sendTime" column="SEND_TIME" type="java.util.Date"/>
+        <property name="returnTime" column="RETURN_TIME" type="java.util.Date"/>
+        <property name="bonusTime" column="BONUS_TIME" type="java.util.Date"/>
+        <property name="renGouCount" column="REN_GOU_COUNT" type="java.lang.Integer"/>
+
+
+        <property name="optimizeType" column="OPTIMIZE_TYPE" type="java.lang.Integer"/>
+        <property name="expectBonus" column="EXPECT_BONUS" type="java.lang.String" length="10"/>
+        <property name="passModel" column="PASS_MODEL" type="java.lang.String" length="50"/>
+
+        <property name="isHide" column="IS_HIDE" type="java.lang.Integer"/>
+        <property name="isVerify" column="IS_VERIFY" type="java.lang.Integer"/>
+    </class>
+</hibernate-mapping>

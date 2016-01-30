@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.order.MatchForMapping" table="TMS_MATCH_FOR_MAPPING">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_MATCH_FOR_MAPPING</param>
+            </generator>
+        </id>
+        <property name="matchName" column="MATCH_NAME" type="java.lang.String" length="50"/>
+        <property name="matchShortName" column="MATCH_SHORT_NAME" type="java.lang.String" length="50"/>
+    </class>
+</hibernate-mapping>

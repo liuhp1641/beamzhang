@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.information.ThemeUserRead" table="INFO_THEME_USERREAD">
+        <id name="id" column="ID"  >
+        </id>
+        <property name="themeCode" column="THEME_CODE" type="java.lang.String"/>
+        <property name="programType" column="PROGRAM_TYPE" type="java.lang.Integer"/>
+        <property name="userCode" column="USER_CODE" type="java.lang.String"/>
+    </class>
+</hibernate-mapping>

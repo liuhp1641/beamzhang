@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cm.manage.model.operate.TaskExchange" table="TASK_EXCHANGE">
+		<id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_TASK_EXCHANGE</param>
+			</generator>
+		</id>
+		<property name="exchangeId" column="EXCHANGE_ID" type="java.lang.String" length="30" />
+		<property name="exchangeName" column="EXCHANGE_NAME" type="java.lang.String" length="30" />
+		<property name="exchangeNote" column="EXCHANGE_NOTE" type="java.lang.String" length="500" />
+		<property name="startTime" column="START_TIME" type="java.util.Date" />
+		<property name="endTime" column="END_TIME" type="java.util.Date" />
+		<property name="returnType" column="RETURN_TYPE" type="java.lang.Integer" />
+		<property name="status" column="STATUS" type="java.lang.Integer" />
+		<property name="exchangeUserCode" column="EXCHANGE_USER_CODE" type="java.lang.String" length="50" />
+		<property name="returnNumbers" column="RETURN_NUMBERS" type="java.lang.Integer" />
+		<property name="eachNumber" column="EACH_NUMBER" type="java.lang.Integer" />
+		<property name="eachUnit" column="EACH_UNIT" type="java.lang.Integer" />
+		<property name="createTime" column="CREATE_TIME" type="java.util.Date" />
+		<property name="updateTime" column="UPDATE_TIME" type="java.util.Date" />
+		<property name="exchangeUserName" column="EXCHANGE_USER_NAME" type="java.lang.String" length="30" />
+		<property name="sid" column="SID" type="java.lang.String" length="30" />
+		<property name="sidName" column="SID_NAME" type="java.lang.String" length="30" />
+		<property name="exchangeGroup" column="EXCHANGE_GROUP" type="java.lang.Integer" />
+		<property name="isBindingMobile" column="IS_BINDING_MOBILE" type="java.lang.Integer" />
+		
+	</class>
+</hibernate-mapping>

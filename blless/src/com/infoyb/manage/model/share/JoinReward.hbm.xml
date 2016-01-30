@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cm.manage.model.share.JoinReward" table="SHARE_JOIN_REWARD">
+		<id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_SHARE_JOIN_REWARD</param>
+			</generator>
+		</id>
+		<property name="shareId" column="SHARE_ID" type="java.lang.String" length="30" />
+		<property name="outUserCode" column="OUT_USER_CODE" type="java.lang.String" length="30" />
+		<property name="awardType" column="AWARD_TYPE" type="java.lang.Integer" />
+		<property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="50" />
+		<property name="amount" column="AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="createTime" column="CREATE_TIME" type="java.util.Date" />
+	</class>
+</hibernate-mapping>

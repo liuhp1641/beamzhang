@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cm.manage.model.report.TicketReport" table="REPORT_TICKET">
+		<id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_REPORT_TICKET</param>
+			</generator>
+		</id>
+		<property name="logDay" column="LOG_DAY" type="java.lang.String" length="30"/>
+		<property name="postCode" column="POST_CODE" type="java.lang.String" length="50"/>
+		<property name="betAmount" column="BET_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="partAmount" column="PART_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="noReceipeAmount" column="NO_RECEIPE_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+	</class>
+</hibernate-mapping>

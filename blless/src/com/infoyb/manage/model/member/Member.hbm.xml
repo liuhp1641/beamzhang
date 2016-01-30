@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.member.Member" table="USER_MEMBER" schema="">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_USER_MEMBER</param>
+            </generator>
+        </id>
+        <property name="userName" column="USER_NAME" type="java.lang.String" length="45"/>
+        <property name="userCode" column="USER_CODE" type="java.lang.String" length="20"/>
+        <property name="mobile" column="MOBILE" type="java.lang.String" length="20"/>
+        <property name="password" column="PASSWORD" type="java.lang.String" length="32"/>
+        <property name="realName" column="REAL_NAME" type="java.lang.String" length="20"/>
+        <property name="cardType" column="CARD_TYPE" type="java.lang.Integer" length="1"/>
+        <property name="cardCode" column="CARD_CODE" type="java.lang.String" length="45"/>
+        <property name="status" column="STATUS" type="java.lang.Integer" length="2"/>
+        <property name="memberCount" column="MEMBER_COUNT" type="java.lang.Integer"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="trackUserCode" column="TRACK_USER_CODE" type="java.lang.String" length="20"/>
+
+        <property name="sid" column="SID" type="java.lang.String" length="20"/>
+        <property name="softVer" column="SOFT_VER" type="java.lang.String" length="10"/>
+        <property name="sysVer" column="SYS_VER" type="java.lang.String" length="10"/>
+        <property name="platform" column="PLATFORM" type="java.lang.String" length="10"/>
+        <property name="ip" column="IP" type="java.lang.String" length="50"/>
+        <property name="machId" column="MACH_ID" type="java.lang.String" length="50"/>
+        <property name="machName" column="MACH_NAME" type="java.lang.String" length="50"/>
+
+        <property name="memberType" column="MEMBER_TYPE" type="java.lang.Integer"/>
+        <property name="unionApp" column="UNION_APP" type="java.lang.Integer"/>
+        <property name="backup1" column="BACKUP1" type="java.lang.String" length="250"/>
+        <property name="backup2" column="BACKUP2" type="java.lang.String" length="250"/>
+        <property name="backup3" column="BACKUP3" type="java.lang.String" length="250"/>
+        <property name="ico" column="ICO" type="java.lang.String" length="50"/>
+        <property name="grade" column="GRADE" type="java.lang.Integer"/>
+        <property name="vip" column="VIP" type="java.lang.Integer"/>
+        <property name="userNameModify" column="USER_NAME_MODIFY" type="java.lang.Integer"/>
+        <property name="passwordModify" column="PASSWORD_MODIFY" type="java.lang.Integer"/>
+        <property name="registerFrom" column="REGISTER_FROM" type="java.lang.Integer"/>
+
+        <property name="sex" column="SEX" type="java.lang.String" length="10"/>
+        <property name="lunarBirthday" column="LUNAR_BIRTHDAY" type="java.lang.String" length="20"/>
+        <property name="solarBirthday" column="SOLAR_BIRTHDAY" type="java.lang.String" length="20"/>
+        <property name="constellation" column="CONSTELLATION" type="java.lang.String" length="20"/>
+        
+        <property name="qq" column="QQ" type="java.lang.String" length="50"/>
+        <property name="weChat" column="WE_CHAT" type="java.lang.String" length="50"/>
+        <property name="email" column="EMAIL" type="java.lang.String" length="50"/>
+        <property name="sinaBlog" column="SINA_BLOG" type="java.lang.String" length="50"/>
+        
+        <property name="unUserID" column="UN_USER_ID" type="java.lang.String" length="50"/>
+        
+    </class>
+
+</hibernate-mapping>

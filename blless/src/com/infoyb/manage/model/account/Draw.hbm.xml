@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cm.manage.model.account.Draw" table="ACCOUNT_DRAW">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_ACCOUNT_DRAW</param>
+            </generator>
+        </id>
+        <property name="userCode" column="USER_CODE" type="java.lang.String" length="45"/>
+        <property name="orderId" column="ORDER_ID" type="java.lang.String" length="20"/>
+        <property name="drawResources" column="DRAW_RESOURCES" type="java.lang.String" length="20"/>
+        <property name="drawInfo" column="DRAW_INFO" type="java.lang.String" length="500"/>
+        <property name="amount" column="AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="bonusAmountNew" column="BONUS_AMOUNT_NEW" type="java.lang.Double" length="15" scale="2"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="acceptTime" column="ACCEPT_TIME" type="java.util.Date"/>
+        <property name="status" column="STATUS" type="java.lang.Integer" length="1"/>
+        <property name="fee" column="FEE" type="java.lang.Double" length="15" scale="2"/>
+        <property name="realFee" column="REAL_FEE" type="java.lang.Double" length="15" scale="2"/>
+        <property name="memo" column="MEMO" type="java.lang.String" length="255"/>
+        <property name="peopleAccepted" column="PEOPLE_ACCEPTED" type="java.lang.String" length="50"/>
+        <property name="peopleRemittance" column="PEOPLE_REMITTANCE" type="java.lang.String" length="50"/>
+        <property name="type" column="TYPE" type="java.lang.Integer" length="1"/>
+        <property name="sid" column="SID" type="java.lang.String" length="20"/>
+        <property name="platform" column="PLATFORM" type="java.lang.String" length="20"/>
+        <property name="softVer" column="SOFT_VER" type="java.lang.String" length="10"/>
+        <property name="transferBatchId" column="TRANSFER_BATCH_ID" type="java.lang.String" length="50"/>
+        <property name="errorMsg" column="ERROR_MSG" type="java.lang.String" length="100"/>
+        <property name="alipayDrawNo" column="ALIPAY_DRAW_NO" type="java.lang.String" length="50"/>
+        <property name="drawLimit" column="DRAW_LIMIT" type="java.lang.Double" length="15" scale="2" />
+    </class>
+</hibernate-mapping>

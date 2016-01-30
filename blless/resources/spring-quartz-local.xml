@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd"
+       default-lazy-init="true">
+
+	<!-- job本次测试 -->
+	<bean id="reportJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.cm.manage.quartz.ReportJob"></property>
+		<property name="applicationContextJobDataKey" value="applicationContext"></property>
+	</bean>
+	<bean id="reportCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">  
+        <property name="jobDetail">  
+            <ref bean="reportJob" /> 
+        </property>  
+        <property name="cronExpression">  
+            <value>0 0 1 * * ?</value>  
+        </property>  
+       
+    </bean>  
+   
+	<bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="reportCronTrigger"></ref>
+			    <ref bean="reportRechargeCronTrigger"/> 
+			</list>
+		</property>
+		<property name="startupDelay" value="0">
+		</property>
+	</bean>
+	
+	 <bean id="reportRechargeCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">  
+        <property name="jobDetail">  
+            <ref bean="reportRechargeJobDetail" />  
+        </property>  
+        <property name="cronExpression">  
+            <value>0 0 1 * * ?</value>  
+        </property>  
+    </bean>     
+    <bean name="reportRechargeJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+        <property name="jobClass" value="com.cm.manage.quartz.ReportRechargeJob"/>
+        <property name="requestsRecovery" value="true"/>
+    </bean>
+</beans>

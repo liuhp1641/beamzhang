@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cm.manage.model.account.InternalAccess" table="ACCOUNT_INTERNAL_ACCESS">
+		<id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_ACCOUNT_INTERNAL_ACCESS</param>
+			</generator>
+		</id>
+		<property name="serialNo" column="SERIAL_NO" type="java.lang.String" length="20" />
+		<property name="relateSerialNo" column="RELATE_SERIAL_NO" type="java.lang.String" length="20" />
+		<property name="userCode" column="USER_CODE" type="java.lang.String" length="20" />
+		<property name="outAccount" column="OUT_ACCOUNT" type="java.lang.String" length="20" />
+		<property name="intoAccount" column="INTO_ACCOUNT" type="java.lang.String" length="20" />
+		<property name="eventType" column="EVENT_TYPE" type="java.lang.Integer" length="1" />
+		<property name="eventCode" column="EVENT_CODE" type="java.lang.String" length="20" />
+		<property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="rechargeAmount" column="RECHARGE_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="presentAmount" column="PRESENT_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="commission" column="COMMISSION" type="java.lang.Double" length="15" scale="2" />
+		<property name="score" column="SCORE" type="java.lang.Double" length="15" scale="2" />
+		<property name="gold" column="GOLD" type="java.lang.Double" length="15" scale="2" />
+		
+		<property name="bonusAmountOld" column="BONUS_AMOUNT_OLD" type="java.lang.Double" length="15" scale="2" />
+		<property name="rechargeAmountOld" column="RECHARGE_AMOUNT_OLD" type="java.lang.Double" length="15" scale="2" />
+		<property name="presentAmountOld" column="PRESENT_AMOUNT_OLD" type="java.lang.Double" length="15" scale="2" />
+		<property name="commissionOld" column="COMMISSION_OLD" type="java.lang.Double" length="15" scale="2" />
+		<property name="scoreOld" column="SCORE_OLD" type="java.lang.Double" length="15" scale="2" />
+		<property name="goldOld" column="GOLD_OLD" type="java.lang.Double" length="15" scale="2" />
+		
+		<property name="bonusAmountNew" column="BONUS_AMOUNT_NEW" type="java.lang.Double" length="15" scale="2" />
+		<property name="rechargeAmountNew" column="RECHARGE_AMOUNT_NEW" type="java.lang.Double" length="15" scale="2" />
+		<property name="presentAmountNew" column="PRESENT_AMOUNT_NEW" type="java.lang.Double" length="15" scale="2" />
+		<property name="commissionNew" column="COMMISSION_NEW" type="java.lang.Double" length="15" scale="2" />
+		<property name="scoreNew" column="SCORE_NEW" type="java.lang.Double" length="15" scale="2" />
+		<property name="goldNew" column="GOLD_NEW" type="java.lang.Double" length="15" scale="2" />
+		
+		<property name="createTime" column="CREATE_TIME" type="java.util.Date" />
+		<property name="acceptTime" column="ACCEPT_TIME" type="java.util.Date" />
+		<property name="memo" column="MEMO" type="java.lang.String" length="100" />
+		<property name="status" column="STATUS" type="java.lang.Integer" length="1" />
+		<property name="operator" column="OPERATOR" type="java.lang.String" length="100" />
+	</class>
+</hibernate-mapping>

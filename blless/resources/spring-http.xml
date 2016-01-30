@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+				http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+				http://www.springframework.org/schema/context
+				http://www.springframework.org/schema/context/spring-context-3.0.xsd
+">
+    <bean id="orderInterface"
+          class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+        <property name="serviceUrl">
+            <value>
+                http://192.168.0.254:8083/order/manage
+            </value>
+        </property>
+        <property name="serviceInterface" value="com.cm.order.http.IOrderManageHttpService">
+        </property>
+    </bean>
+
+    <bean id="memberInterface"
+          class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+        <property name="serviceUrl">
+            <value>
+                http://192.168.0.254:8081/member/manage
+            </value>
+        </property>
+        <property name="serviceInterface" value="com.cm.user.http.IMemberManageHttpService">
+        </property>
+    </bean>
+
+    <bean id="accountInterface"
+          class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+        <property name="serviceUrl">
+            <value>
+                http://192.168.0.254:8082/account/accountService
+            </value>
+        </property>
+        <property name="serviceInterface" value="com.cm.account.http.IAccountHttpService">
+        </property>
+    </bean>
+
+    <bean id="rechargeManageService" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+        <property name="serviceUrl" value="http://192.168.0.254:8082/account/rechargeManageService"/>
+        <property name="serviceInterface" value="com.cm.account.http.IRechargeManageHttpService"/>
+    </bean>
+
+    <bean id="messageManagesHttpService" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+        <property name="serviceUrl" value="http://192.168.0.254:8088/message/messageManagesService"/>
+        <property name="serviceInterface" value="com.cm.message.http.IMessageManagesHttpService"/>
+    </bean>
+    
+    <bean id="scoreQutzInterface"
+          class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+        <property name="serviceUrl">
+            <value>
+                http://192.168.0.254:8087/score/scoreQutzService
+            </value>
+        </property>
+        <property name="serviceInterface" value="com.cm.score.http.IScoreQutzHttpService">
+        </property>
+    </bean>
+    <!-- 积分商城 start -->
+    <bean id="scoreMallInterface" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+    	<property name="serviceUrl" value="http://192.168.0.254:8091/scoreMall/scoreMall4BackHttpService"></property>
+    	<!-- <property name="serviceUrl" value="http://192.168.0.117:8080/scoreMall/scoreMall/scoreMall4BackHttpService"></property> -->
+    	<property name="serviceInterface" value="com.cm.scoreMall.http.IScoreMall4BackHttpService"></property>
+    </bean>
+    <!-- 积分商城 end -->
+
+    <bean id="indexManageInterface" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+        <property name="serviceUrl" value="http://192.168.0.254:8092/other/manageIndex"></property>
+        <!-- <property name="serviceUrl" value="http://192.168.0.117:8080/scoreMall/scoreMall/scoreMall4BackHttpService"></property> -->
+        <property name="serviceInterface" value="com.cm.other.http.IIndexManageHttpService"></property>
+    </bean>
+    
+    <!-- 21点游戏后台管理  start-->
+    <bean id="blackjackGameForBackInterface" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+    	<property name="serviceUrl" value="http://192.168.0.190:8081/gameHall/gameHall/blackjackGameForBackHttpService"></property>
+    	<!-- <property name="serviceUrl" value="http://192.168.0.190:8081/game/game/blackjackGameForBackHttpService"></property> -->
+    	<property name="serviceInterface" value="com.cm.game.http.IBlackjackGameForBackHttpService"></property>
+    </bean>
+    <!-- 21点游戏后台管理  end-->
+</beans>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cm.manage.model.score.ScoreQutz" table="SCORE_QUTZ">
+		<id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_SCORE_QUTZ</param>
+			</generator>
+		</id>
+		<property name="qutzId" column="QUTZ_ID" type="java.lang.String" length="30" />
+		<property name="qutzName" column="QUTZ_NAME" type="java.lang.String" length="255" />
+		<property name="qutzTopic" column="QUTZ_TOPIC" type="java.lang.String" length="255" />
+		<property name="qutzIssue" column="QUTZ_ISSUE" type="java.lang.String" length="50" />
+		<property name="qutzTypeId" column="QUTZ_TYPE_ID" type="java.lang.String" length="30" />
+		<property name="bonusType" column="BONUS_TYPE" type="java.lang.Integer" />
+		<property name="startTime" column="START_TIME" type="java.util.Date" />
+		<property name="endTime" column="END_TIME" type="java.util.Date" />
+		<property name="vipLow" column="VIP_LOW" type="java.lang.Integer" />
+		<property name="vipHigh" column="VIP_HIGH" type="java.lang.Integer" />
+		<property name="status" column="STATUS" type="java.lang.Integer" />
+		<property name="bonusStatus" column="BONUS_STATUS" type="java.lang.Integer" />
+		<property name="bonusAmountTotal" column="BONUS_AMOUNT_TOTAL" type="java.lang.Double" length="15" scale="2" />
+		<property name="sid" column="SID" type="java.lang.String" length="30" />
+		<property name="qutzAnswerId" column="QUTZ_ANSWER_ID" type="java.lang.String" length="30" />
+		<property name="qutzAnswerNote" column="QUTZ_ANSWER_NOTE" type="java.lang.String" length="255" />
+		<property name="attendNumbers" column="ATTEND_NUMBERS" type="java.lang.Integer" />
+		<property name="attendAmount" column="ATTEND_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="qutzAmount" column="QUTZ_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="commission" column="COMMISSION" type="java.lang.Double" length="15" scale="2" />
+		<property name="lastBonusAmount" column="LAST_BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="isHide" column="IS_HIDE" type="java.lang.Integer" />
+		<property name="isRecommend" column="IS_RECOMMEND" type="java.lang.Integer" />
+		<property name="imgUrl" column="IMG_URL" type="java.lang.String" length="100" />
+		<property name="isShare" column="IS_SHARE" type="java.lang.Integer" />
+		<property name="createTime" column="CREATE_TIME" type="java.util.Date" />
+		<property name="updateTime" column="UPDATE_TIME" type="java.util.Date" />
+		<property name="bonusTime" column="BONUS_TIME" type="java.util.Date" />
+	</class>
+</hibernate-mapping>
